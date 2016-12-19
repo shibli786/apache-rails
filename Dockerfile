@@ -17,7 +17,7 @@ COPY hosts /etc/hosts
 RUN  apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 561F9B9CAC40B2F7
 RUN  apt-get install -y apt-transport-https ca-certificates
 
-# Add our APT repository
+# Add APT repository
 RUN  sh -c 'echo deb https://oss-binaries.phusionpassenger.com/apt/passenger trusty main > /etc/apt/sources.list.d/passenger.list'
 RUN  apt-get update
 
@@ -26,11 +26,6 @@ RUN  apt-get update
 RUN  apt-get install -y libapache2-mod-passenger
 
 RUN  a2enmod passenger
-#RUN service apache2 restart
-#RUN ["chmod", "+x", "/var/www/sites/preitv10/current/start.sh"]
-
-#CMD ["/var/www/sites/preitv10/current/start.sh"]
-#CMD["bin/bash","service apache2 restart"]
 
     
 # Set Apache environment variables (can be changed on docker run with -e)
