@@ -1,6 +1,6 @@
 FROM rails:latest
 
-MAINTAINER Syed Moinuddin Shibli<syed.shibli@daffodilsw.com>
+MAINTAINER Syed Moinuddin Shibli<mshibli786@gmail.com>
 #intsall apache
 RUN  apt-get update && apt-get install -y apache2 \ 
 	apache2-doc apache2-utils
