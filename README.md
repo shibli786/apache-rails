@@ -11,9 +11,12 @@ To build this image Run Following Command
 navigate to the root folder 
 
 
-docker build -t apache-rails .
+
+ docker build -t apache-rails .
 
 To run this image
-docker run -tid -p 80:80  apache-rails
+
+
+ docker run -tid -p 80:80  apache-rails
 
 
