@@ -4,12 +4,6 @@ MAINTAINER Syed Moinuddin Shibli<syed.shibli@daffodilsw.com>
 #intsall apache
 RUN  apt-get update && apt-get install -y apache2 \ 
 	apache2-doc apache2-utils
-RUN a2enmod rewrite
-COPY testapp.conf /etc/apache2/sites-available/
-RUN a2ensite testapp.conf
-
-
-COPY hosts /etc/hosts
 
 
 #install passenger
